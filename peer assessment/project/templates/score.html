@@ -1,0 +1,25 @@
+
+{% extends "main.html" %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Scores</h3>
+            </div>
+
+            <ul class="list-group">
+                {% for score in score %}
+                <li class="list-group-item">
+                    <strong>{{ score.total }}</strong>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

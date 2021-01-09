@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+
+{% block title %}Results{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Assessment Result</h3>
+            </div>
+
+            <div class="panel-body">
+                <h3>{{ comment.question }}</h3>
+            </div>
+
+            <ul class="list-group">
+                <li class="list-group-item">{{ comment.comment_one }} </li>
+
+            </ul>
+<!--
+            <div class="panel-footer">
+                Total &mdash; <strong>{{ poll.total }}</strong>
+            </div>
+-->
+        </div>
+    </div>
+</div>
+{% endblock %}

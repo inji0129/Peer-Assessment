@@ -1,0 +1,28 @@
+
+{% extends "main.html" %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Peers</h3>
+            </div>
+
+            <ul class="list-group">
+                {% for peer in peers %}
+                <li class="list-group-item">
+                    <strong>{{ peer.name }}</strong>
+                    <span class="pull-right">
+                        <a href="{% url 'homeview' %}" class="btn btn-info btn-xs">Select</a> &nbsp;
+                    </span>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
